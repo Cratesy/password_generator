@@ -1,19 +1,30 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function getRandomLower() {
+  return;
+}
+
+function getRandomUpper() {
+  return;
+}
+
+function getRandomNumber() {
+  return;
+}
+function getRandomSymbol() {
+  const symbols = [`@%+\\/'!#$^?:,)(}{][~-_.`];
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
 // Declare a new function on line 3
 function generatePassword() {
-	// Create a variable to store our generated password
-	var password = ''
+  // Create a variable to store our generated password
+  var password = "";
 
-	// Logic would go here
-	...
+  // Logic would go here
 
-
-
-
-	// Return our created password
-	return password;
+  // Return our created password
+  return password;
 }
 
 // Write password to the #password input
@@ -22,7 +33,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
