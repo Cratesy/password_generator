@@ -1,11 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// array for all the password charater types
-const numbersarray = ["0", "1", "2", "3", "4", "5", "6", "7", "6", "8", "9"];
+// array for all the password character types
+const numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "6", "8", "9"];
 
-const specialchararray = [`@%+\\/'!#$^?:,)(}{][~-_.`];
+const specialCharArray = [`@%+\\/'!#$^?:,)(}{][~-_.`];
 
-const uppercasearray = [
+const uppercaseArray = [
   "A",
   "B",
   "C",
@@ -32,7 +32,7 @@ const uppercasearray = [
   "Y",
   "Z",
 ];
-const lowercasearray = [
+const lowercaseArray = [
   "a",
   "b",
   "c",
@@ -60,15 +60,31 @@ const lowercasearray = [
   "z",
 ];
 
-// Declare a new function on line 3
+// Declare function
 function generatePassword() {
   // Create a variable to store our generated password
   var password = "";
 
-  // Logic would go here
+  // passwordLength prompt and validation
+  prompt("how long would you like your password");
 
-  // Return our created password
-  return password;
+  if (passwordLength < 8) {
+    alert("password too short must be 8 or more");
+  } else if (passwordLength > 128) {
+    alert("password too long must be less than 128");
+  } else {
+    // var  = "passwordLength";
+    var passwordLength = [""];
+  }
+
+  // numbersArray selection
+
+  prompt("would you like numbers in your password");
+  if (wouldLikeNumbers) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Write password to the #password input
