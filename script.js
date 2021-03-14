@@ -66,15 +66,15 @@ function generatePassword() {
   var password = "";
 
   // passwordLength prompt and validation
-  prompt("how long would you like your password");
+  const passwordLength = prompt("how long would you like your password");
 
   if (passwordLength < 8) {
     alert("password too short must be 8 or more");
+    prompt("please pick a length greater then 8");
   } else if (passwordLength > 128) {
     alert("password too long must be less than 128");
+    prompt("please pick a length less then 128");
   } else {
-    // var  = "passwordLength";
-    var passwordLength = [""];
   }
 
   // numbersArray selection
