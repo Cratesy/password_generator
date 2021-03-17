@@ -33,6 +33,7 @@ const upperCaseArray = [
   "Y",
   "Z",
 ];
+
 const lowerCaseArray = [
   "a",
   "b",
@@ -61,6 +62,11 @@ const lowerCaseArray = [
   "z",
 ];
 
+let isNumbers;
+let isSpecialChar;
+let isUpperCase;
+let isLowerCase;
+
 // Declare function
 function generatePassword() {
   // Create a variable to store our generated password
@@ -68,45 +74,46 @@ function generatePassword() {
 
   // passwordLength prompt and validation
   const passwordLength = prompt("how long would you like your password");
+  console.log(passwordLength);
 
-  if (passwordLength > 8 && passwordLength < 128) {
+  const passwordLengthNumber = parseInt(passwordLength, 10);
+
+  if (passwordLengthNumber >= 8 && passwordLengthNumber <= 128) {
   } else {
     alert("password must be between 8 - 128");
   }
+  console.log(passwordLengthNumber);
 
   // numbersArray
-  const wouldLikeNumbers = prompt("would you like numbers in your password");
+  isNumbers = confirm("would you like numbers in your password");
 
-  if (wouldLikeNumbers) {
+  if (isNumbers) {
   } else {
   }
+  console.log(isNumbers);
   // specialCharArray
-  const wouldLikeSpecialChar = prompt(
-    "would you like special character in your password"
-  );
+  isSpecialChar = confirm("would you like special character in your password");
 
   // if() {
   // } else{
 
   // }
+  console.log(isSpecialChar);
   // upperCase
-  const wouldLikeUpperCase = prompt(
-    "would you like uppercase in your password"
-  );
+  isUpperCase = confirm("would you like uppercase in your password");
   // if(){
 
   // }else{
-
+  console.log(isUpperCase);
   // }
   // lowerCase
-  const wouldLikeLowerCase = prompt(
-    "would you like lowercase in your password"
-  );
+  isLowerCase = confirm("would you like lowercase in your password");
   // if (){
 
   // }else{
 
   // }
+  console.log(isLowerCase);
 }
 
 // Write password to the #password input
