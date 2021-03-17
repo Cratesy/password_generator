@@ -66,6 +66,7 @@ let isNumbers;
 let isSpecialChar;
 let isUpperCase;
 let isLowerCase;
+let optionsArray = [];
 
 // Declare function
 function generatePassword() {
@@ -104,7 +105,6 @@ function generatePassword() {
 
   console.log(isLowerCase);
 }
-const optionsArray = [, , ,];
 
 if (isNumbers) {
   optionsArray.push(numbersArray);
@@ -118,8 +118,6 @@ if (isSpecialChar) {
 if (isLowerCase) {
   optionsArray.push(lowerCaseArray);
 }
-
-console.log(optionsArray);
 
 // Write password to the #password input
 function writePassword() {
