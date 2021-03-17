@@ -104,6 +104,17 @@ function generatePassword() {
 
   console.log(isLowerCase);
 }
+const optionsArray = [];
+
+if (isNumbers) {
+  optionsArray.push(numbersArray);
+} else if (isUpperCase) {
+  optionsArray.push(upperCaseArray);
+} else if (isSpecialChar) {
+  optionsArray.push(specialCharArray);
+} else {
+  optionsArray.push(lowerCaseArray);
+}
 
 // Write password to the #password input
 function writePassword() {
