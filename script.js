@@ -87,32 +87,21 @@ function generatePassword() {
   // numbersArray
   isNumbers = confirm("would you like numbers in your password");
 
-  if (isNumbers) {
-  } else {
-  }
   console.log(isNumbers);
+
   // specialCharArray
   isSpecialChar = confirm("would you like special character in your password");
 
-  // if() {
-  // } else{
-
-  // }
   console.log(isSpecialChar);
+
   // upperCase
   isUpperCase = confirm("would you like uppercase in your password");
-  // if(){
 
-  // }else{
   console.log(isUpperCase);
-  // }
-  // lowerCase
+
+  //lowercase
   isLowerCase = confirm("would you like lowercase in your password");
-  // if (){
 
-  // }else{
-
-  // }
   console.log(isLowerCase);
 }
 
