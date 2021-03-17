@@ -80,29 +80,33 @@ function generatePassword() {
   if (wouldLikeNumbers) {
   } else {
   }
- // specialCharArray
-  const wouldLikeSpecialChar = prompt("would you like special character in your password");
+  // specialCharArray
+  const wouldLikeSpecialChar = prompt(
+    "would you like special character in your password"
+  );
 
-  if(){ 
-  } else{
+  // if() {
+  // } else{
 
-  }
+  // }
+  // upperCase
+  const wouldLikeUpperCase = prompt(
+    "would you like uppercase in your password"
+  );
+  // if(){
 
-  const wouldLikeUpperCase = prompt ("would you like uppercase in your password")
-  if(){
+  // }else{
 
-  }else{
+  // }
+  // lowerCase
+  const wouldLikeLowerCase = prompt(
+    "would you like lowercase in your password"
+  );
+  // if (){
 
-  }
+  // }else{
 
-  const wouldLikeLowerCase = prompt ("would you like lowercase in your password")
-  if (){
-
-  }else{
-    
-  }
-
-
+  // }
 }
 
 // Write password to the #password input
