@@ -1,11 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // array for all the password character types
+
 const numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "6", "8", "9"];
 
-const specialCharArray = [`@%+\\/'!#$^?:,)(}{][~-_.`];
+const specialCharArray = ["@", "%", "+", "!", "#", "$", "?"];
 
-const uppercaseArray = [
+const upperCaseArray = [
   "A",
   "B",
   "C",
@@ -32,7 +33,7 @@ const uppercaseArray = [
   "Y",
   "Z",
 ];
-const lowercaseArray = [
+const lowerCaseArray = [
   "a",
   "b",
   "c",
@@ -68,22 +69,16 @@ function generatePassword() {
   // passwordLength prompt and validation
   const passwordLength = prompt("how long would you like your password");
 
-  if (passwordLength < 8) {
-    alert("password too short must be 8 or more");
-    prompt("please pick a length greater then 8");
-  } else if (passwordLength > 128) {
-    alert("password too long must be less than 128");
-    prompt("please pick a length less then 128");
+  if (passwordLength > 8 && passwordLength < 128) {
   } else {
+    alert("password must be between 8 - 128");
   }
 
   // numbersArray selection
+  const wouldLikeNumbers = prompt("would you like numbers in your password");
 
-  prompt("would you like numbers in your password");
   if (wouldLikeNumbers) {
-    return true;
   } else {
-    return false;
   }
 }
 
