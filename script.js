@@ -74,12 +74,35 @@ function generatePassword() {
     alert("password must be between 8 - 128");
   }
 
-  // numbersArray selection
+  // numbersArray
   const wouldLikeNumbers = prompt("would you like numbers in your password");
 
   if (wouldLikeNumbers) {
   } else {
   }
+ // specialCharArray
+  const wouldLikeSpecialChar = prompt("would you like special character in your password");
+
+  if(){ 
+  } else{
+
+  }
+
+  const wouldLikeUpperCase = prompt ("would you like uppercase in your password")
+  if(){
+
+  }else{
+
+  }
+
+  const wouldLikeLowerCase = prompt ("would you like lowercase in your password")
+  if (){
+
+  }else{
+    
+  }
+
+
 }
 
 // Write password to the #password input
