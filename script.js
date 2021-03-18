@@ -62,6 +62,7 @@ const lowerCaseArray = [
   "z",
 ];
 
+// storage
 let isNumbers;
 let isSpecialChar;
 let isUpperCase;
@@ -102,6 +103,7 @@ function generatePassword() {
 
     console.log(isLowerCase);
 
+    // if statements to push into the optionsArray
     if (isNumbers) {
       optionsArray.push(numbersArray);
     }
@@ -118,6 +120,8 @@ function generatePassword() {
       alert("please select at least one character");
     }
     console.log(optionsArray);
+
+    // for loop for passwordLengthNumber added randomArrays and randomCharacter
     for (let i = 0; i < passwordLengthNumber; i++) {
       let randomArray =
         optionsArray[Math.floor(Math.random() * optionsArray.length)];
@@ -133,8 +137,6 @@ function generatePassword() {
     alert("password must be between 8 - 128");
   }
 }
-
-// let randomArray = optionsArray[Math.floor(math.random() * optionsArray.length)];
 
 // Write password to the #password input
 function writePassword() {
