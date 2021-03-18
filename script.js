@@ -66,7 +66,7 @@ let isNumbers;
 let isSpecialChar;
 let isUpperCase;
 let isLowerCase;
-let optionsArray = [];
+const optionsArray = [];
 
 // Declare function
 function generatePassword() {
@@ -107,14 +107,18 @@ function generatePassword() {
 }
 
 if (isNumbers) {
-  optionsArray.push(...numbersArray);
-} else if (isUpperCase) {
-  optionsArray.push(...upperCaseArray);
-} else if (isSpecialChar) {
-  optionsArray.push(...specialCharArray);
-} else if (isLowerCase) {
-  optionsArray.push(...lowerCaseArray);
-} else {
+  optionsArray.push(numbersArray);
+}
+if (isUpperCase) {
+  optionsArray.push(upperCaseArray);
+}
+if (isSpecialChar) {
+  optionsArray.push(specialCharArray);
+}
+if (isLowerCase) {
+  optionsArray.push(lowerCaseArray);
+}
+if (!isLowerCase && !isNumbers && !isUpperCase && !isSpecialChar) {
   alert("please select at least one character type ");
 }
 console.log(optionsArray);
