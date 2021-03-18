@@ -73,7 +73,6 @@ const optionsArray = [];
 function generatePassword() {
   // passwordLength prompt and validation
   const passwordLength = prompt("how long would you like your password");
-  console.log(passwordLength);
 
   const passwordLengthNumber = parseInt(passwordLength, 10);
 
@@ -84,24 +83,16 @@ function generatePassword() {
     // numbersArray
     isNumbers = confirm("would you like numbers in your password");
 
-    console.log(isNumbers);
-
     // specialCharArray
     isSpecialChar = confirm(
       "would you like special character in your password"
     );
 
-    console.log(isSpecialChar);
-
     // upperCaseArray
     isUpperCase = confirm("would you like uppercase in your password");
 
-    console.log(isUpperCase);
-
     //lowercaseArray
     isLowerCase = confirm("would you like lowercase in your password");
-
-    console.log(isLowerCase);
 
     // if statements to push into the optionsArray
     if (isNumbers) {
@@ -119,7 +110,6 @@ function generatePassword() {
     if (!isNumbers && !isUpperCase && !isSpecialChar && !isLowerCase) {
       alert("please select at least one character");
     }
-    console.log(optionsArray);
 
     // for loop for passwordLengthNumber added randomArrays and randomCharacter
     for (let i = 0; i < passwordLengthNumber; i++) {
@@ -130,7 +120,6 @@ function generatePassword() {
 
       passwordArray.push(randomCharacter);
     }
-    console.log(passwordArray);
 
     return passwordArray.join("");
   } else {
