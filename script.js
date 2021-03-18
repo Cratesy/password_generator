@@ -118,9 +118,6 @@ if (isSpecialChar) {
 if (isLowerCase) {
   optionsArray.push(lowerCaseArray);
 }
-if (!isLowerCase && !isNumbers && !isUpperCase && !isSpecialChar) {
-  alert("please select at least one character type ");
-}
 console.log(optionsArray);
 
 // let randomArray = optionsArray[Math.floor(math.random() * optionsArray.length)];
