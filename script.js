@@ -104,21 +104,24 @@ function generatePassword() {
   isLowerCase = confirm("would you like lowercase in your password");
 
   console.log(isLowerCase);
-}
 
-if (isNumbers) {
-  optionsArray.push(numbersArray);
+  if (isNumbers) {
+    optionsArray.push(numbersArray);
+  }
+  if (isUpperCase) {
+    optionsArray.push(upperCaseArray);
+  }
+  if (isSpecialChar) {
+    optionsArray.push(specialCharArray);
+  }
+  if (isLowerCase) {
+    optionsArray.push(lowerCaseArray);
+  }
+  if (!isNumbers && !isUpperCase && !isSpecialChar && !isLowerCase) {
+    alert("please select at least one character");
+  }
+  console.log(optionsArray);
 }
-if (isUpperCase) {
-  optionsArray.push(upperCaseArray);
-}
-if (isSpecialChar) {
-  optionsArray.push(specialCharArray);
-}
-if (isLowerCase) {
-  optionsArray.push(lowerCaseArray);
-}
-console.log(optionsArray);
 
 // let randomArray = optionsArray[Math.floor(math.random() * optionsArray.length)];
 
