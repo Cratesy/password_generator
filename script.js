@@ -77,50 +77,61 @@ function generatePassword() {
   const passwordLengthNumber = parseInt(passwordLength, 10);
 
   if (passwordLengthNumber >= 8 && passwordLengthNumber <= 128) {
+    // Create a variable to store our generated password
+    const passwordArray = [];
+
+    // numbersArray
+    isNumbers = confirm("would you like numbers in your password");
+
+    console.log(isNumbers);
+
+    // specialCharArray
+    isSpecialChar = confirm(
+      "would you like special character in your password"
+    );
+
+    console.log(isSpecialChar);
+
+    // upperCaseArray
+    isUpperCase = confirm("would you like uppercase in your password");
+
+    console.log(isUpperCase);
+
+    //lowercaseArray
+    isLowerCase = confirm("would you like lowercase in your password");
+
+    console.log(isLowerCase);
+
+    if (isNumbers) {
+      optionsArray.push(numbersArray);
+    }
+    if (isUpperCase) {
+      optionsArray.push(upperCaseArray);
+    }
+    if (isSpecialChar) {
+      optionsArray.push(specialCharArray);
+    }
+    if (isLowerCase) {
+      optionsArray.push(lowerCaseArray);
+    }
+    if (!isNumbers && !isUpperCase && !isSpecialChar && !isLowerCase) {
+      alert("please select at least one character");
+    }
+    console.log(optionsArray);
+    for (let i = 0; i < passwordLengthNumber; i++) {
+      let randomArray =
+        optionsArray[Math.floor(Math.random() * optionsArray.length)];
+      let randomCharacter =
+        randomArray[Math.floor(Math.random() * randomArray.length)];
+
+      passwordArray.push(randomCharacter);
+    }
+    console.log(passwordArray);
+
+    return passwordArray.join("");
   } else {
     alert("password must be between 8 - 128");
   }
-  console.log(passwordLengthNumber);
-
-  // Create a variable to store our generated password
-  var password = "";
-
-  // numbersArray
-  isNumbers = confirm("would you like numbers in your password");
-
-  console.log(isNumbers);
-
-  // specialCharArray
-  isSpecialChar = confirm("would you like special character in your password");
-
-  console.log(isSpecialChar);
-
-  // upperCaseArray
-  isUpperCase = confirm("would you like uppercase in your password");
-
-  console.log(isUpperCase);
-
-  //lowercaseArray
-  isLowerCase = confirm("would you like lowercase in your password");
-
-  console.log(isLowerCase);
-
-  if (isNumbers) {
-    optionsArray.push(numbersArray);
-  }
-  if (isUpperCase) {
-    optionsArray.push(upperCaseArray);
-  }
-  if (isSpecialChar) {
-    optionsArray.push(specialCharArray);
-  }
-  if (isLowerCase) {
-    optionsArray.push(lowerCaseArray);
-  }
-  if (!isNumbers && !isUpperCase && !isSpecialChar && !isLowerCase) {
-    alert("please select at least one character");
-  }
-  console.log(optionsArray);
 }
 
 // let randomArray = optionsArray[Math.floor(math.random() * optionsArray.length)];
