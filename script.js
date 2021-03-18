@@ -70,9 +70,6 @@ let optionsArray = [];
 
 // Declare function
 function generatePassword() {
-  // Create a variable to store our generated password
-  var password = "";
-
   // passwordLength prompt and validation
   const passwordLength = prompt("how long would you like your password");
   console.log(passwordLength);
@@ -85,6 +82,9 @@ function generatePassword() {
   }
   console.log(passwordLengthNumber);
 
+  // Create a variable to store our generated password
+  var password = "";
+
   // numbersArray
   isNumbers = confirm("would you like numbers in your password");
 
@@ -95,29 +95,31 @@ function generatePassword() {
 
   console.log(isSpecialChar);
 
-  // upperCase
+  // upperCaseArray
   isUpperCase = confirm("would you like uppercase in your password");
 
   console.log(isUpperCase);
 
-  //lowercase
+  //lowercaseArray
   isLowerCase = confirm("would you like lowercase in your password");
 
   console.log(isLowerCase);
 }
 
 if (isNumbers) {
-  optionsArray.push(numbersArray);
+  optionsArray.push(...numbersArray);
+} else if (isUpperCase) {
+  optionsArray.push(...upperCaseArray);
+} else if (isSpecialChar) {
+  optionsArray.push(...specialCharArray);
+} else if (isLowerCase) {
+  optionsArray.push(...lowerCaseArray);
+} else {
+  alert("please select at least one character type ");
 }
-if (isUpperCase) {
-  optionsArray.push(upperCaseArray);
-}
-if (isSpecialChar) {
-  optionsArray.push(specialCharArray);
-}
-if (isLowerCase) {
-  optionsArray.push(lowerCaseArray);
-}
+console.log(optionsArray);
+
+// let randomArray = optionsArray[Math.floor(math.random() * optionsArray.length)];
 
 // Write password to the #password input
 function writePassword() {
